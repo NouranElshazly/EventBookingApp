@@ -6,14 +6,6 @@ abstract class TextStyles {
     fontSize: 24,
     fontWeight: FontWeight.w400,
   );
-  static const TextStyle title = TextStyle(
-    fontSize: 24,
-    fontWeight: FontWeight.w600,
-  );
-  static const TextStyle subtitle = TextStyle(
-    fontSize: 22,
-    fontWeight: FontWeight.w500,
-  );
   static const TextStyle body3 = TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.w400,
