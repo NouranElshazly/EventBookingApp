@@ -1,21 +1,22 @@
 import 'package:event_booking/core/styles/color.dart';
-import 'package:event_booking/features/auth/welcom/on_boarding_screen_3.dart';
+import 'package:event_booking/features/auth/pages/signin.dart';
 import 'package:flutter/material.dart';
+import 'package:event_booking/core/functions/navigation.dart';
 
-class OnBoardingscreen2 extends StatefulWidget {
-  const OnBoardingscreen2({super.key});
+class OnBoardingScreen3 extends StatefulWidget {
+  const OnBoardingScreen3({super.key});
 
   @override
-  State<OnBoardingscreen2> createState() => _OnBoardingscreen2State();
+  State<OnBoardingScreen3> createState() => _OnBoardingScreen3State();
 }
 
-class _OnBoardingscreen2State extends State<OnBoardingscreen2> {
-  int _currentDot = 1;
+class _OnBoardingScreen3State extends State<OnBoardingScreen3> {
+  final int _currentDot = 2;
 
   void _nextScreen() {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => const OnBoardingScreen3()),
+      MaterialPageRoute(builder: (context) => const SignInPage()),
     );
   }
 
@@ -35,14 +36,14 @@ class _OnBoardingscreen2State extends State<OnBoardingscreen2> {
               left: 0,
               right: 0,
               child: Padding(
-                padding: const EdgeInsets.all(60.0),
+                padding: const EdgeInsets.all(16.0),
                 child: SizedBox(
                   height: MediaQuery.of(context).size.height * 0.55,
                   width: MediaQuery.of(context).size.width,
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.only(bottom: 16.0),
                     child: Image(
-                      image: AssetImage('assets/images/background2.png'),
+                      image: AssetImage('assets/images/background3.png'),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -87,7 +88,7 @@ class _OnBoardingscreen2State extends State<OnBoardingscreen2> {
                       const SizedBox(height: 20),
                       // First sentence - BOLD - centered
                       const Text(
-                        ' Web Have Modern Events Calendar Feature',
+                        '  To Look Up More Events or Activities Nearby By Map',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 24,
@@ -141,10 +142,7 @@ class _OnBoardingscreen2State extends State<OnBoardingscreen2> {
                           ),
                           TextButton(
                             onPressed: () {
-                              setState(() {
-                                _currentDot = 2;
-                              });
-                              _nextScreen();
+                              push(context, SignInPage());
                             },
                             child: const Text(
                               'Next',

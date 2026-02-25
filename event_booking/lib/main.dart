@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:event_booking/core/styles/apptheme.dart';
-import 'package:event_booking/features/auth/pages/signin.dart';
+import 'package:event_booking/features/welcom/pages/splash_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -22,7 +22,7 @@ class MainApp extends StatelessWidget {
         );
       },
       debugShowCheckedModeBanner: false,
-      home: SignInPage(),
+      home: SplashScreen(),
     );
   }
 }

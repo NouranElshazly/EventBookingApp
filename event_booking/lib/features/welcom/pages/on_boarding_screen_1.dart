@@ -1,21 +1,21 @@
 import 'package:event_booking/core/styles/color.dart';
-import 'package:event_booking/features/auth/pages/signin.dart';
+import 'package:event_booking/features/welcom/pages/on_boardingscreen_2.dart';
 import 'package:flutter/material.dart';
 
-class OnBoardingScreen3 extends StatefulWidget {
-  const OnBoardingScreen3({super.key});
+class OnBoardingScreen1 extends StatefulWidget {
+  const OnBoardingScreen1({super.key});
 
   @override
-  State<OnBoardingScreen3> createState() => _OnBoardingScreen3State();
+  State<OnBoardingScreen1> createState() => _OnBoardingScreen1State();
 }
 
-class _OnBoardingScreen3State extends State<OnBoardingScreen3> {
-  final int _currentDot = 2;
+class _OnBoardingScreen1State extends State<OnBoardingScreen1> {
+  int _currentDot = 0;
 
   void _nextScreen() {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => const SignInPage()),
+      MaterialPageRoute(builder: (context) => const OnBoardingscreen2()),
     );
   }
 
@@ -39,12 +39,9 @@ class _OnBoardingScreen3State extends State<OnBoardingScreen3> {
                 child: SizedBox(
                   height: MediaQuery.of(context).size.height * 0.55,
                   width: MediaQuery.of(context).size.width,
-                  child: Padding(
-                    padding: const EdgeInsets.only(bottom: 16.0),
-                    child: Image(
-                      image: AssetImage('assets/images/background3.png'),
-                      fit: BoxFit.cover,
-                    ),
+                  child: Image(
+                    image: AssetImage('assets/images/background1.png'),
+                    fit: BoxFit.cover,
                   ),
                 ),
               ),
@@ -87,7 +84,7 @@ class _OnBoardingScreen3State extends State<OnBoardingScreen3> {
                       const SizedBox(height: 20),
                       // First sentence - BOLD - centered
                       const Text(
-                        '  To Look Up More Events or Activities Nearby By Map',
+                        'Explore upcoming and nearby events',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 24,
@@ -98,7 +95,7 @@ class _OnBoardingScreen3State extends State<OnBoardingScreen3> {
                       const SizedBox(height: 16),
                       // Second sentence - normal weight - centered
                       const Text(
-                        ' In publishing and graphic design, Lorem is a placeholder text commonly ',
+                        'in publishing and graphic design, Lorem is a placeholder text commonly',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 16,
@@ -140,7 +137,12 @@ class _OnBoardingScreen3State extends State<OnBoardingScreen3> {
                             ),
                           ),
                           TextButton(
-                            onPressed: _nextScreen,
+                            onPressed: () {
+                              setState(() {
+                                _currentDot = 1;
+                              });
+                              _nextScreen();
+                            },
                             child: const Text(
                               'Next',
                               style: TextStyle(
