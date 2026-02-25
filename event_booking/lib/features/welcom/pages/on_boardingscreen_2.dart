@@ -1,21 +1,21 @@
 import 'package:event_booking/core/styles/color.dart';
-import 'package:event_booking/features/auth/welcom/on_boardingscreen_2.dart';
+import 'package:event_booking/features/welcom/pages/on_boarding_screen_3.dart';
 import 'package:flutter/material.dart';
 
-class OnBoardingScreen1 extends StatefulWidget {
-  const OnBoardingScreen1({super.key});
+class OnBoardingscreen2 extends StatefulWidget {
+  const OnBoardingscreen2({super.key});
 
   @override
-  State<OnBoardingScreen1> createState() => _OnBoardingScreen1State();
+  State<OnBoardingscreen2> createState() => _OnBoardingscreen2State();
 }
 
-class _OnBoardingScreen1State extends State<OnBoardingScreen1> {
-  int _currentDot = 0;
+class _OnBoardingscreen2State extends State<OnBoardingscreen2> {
+  int _currentDot = 1;
 
   void _nextScreen() {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => const OnBoardingscreen2()),
+      MaterialPageRoute(builder: (context) => const OnBoardingScreen3()),
     );
   }
 
@@ -35,13 +35,16 @@ class _OnBoardingScreen1State extends State<OnBoardingScreen1> {
               left: 0,
               right: 0,
               child: Padding(
-                padding: const EdgeInsets.all(16.0),
+                padding: const EdgeInsets.all(60.0),
                 child: SizedBox(
                   height: MediaQuery.of(context).size.height * 0.55,
                   width: MediaQuery.of(context).size.width,
-                  child: Image(
-                    image: AssetImage('assets/images/background1.png'),
-                    fit: BoxFit.cover,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Image(
+                      image: AssetImage('assets/images/background2.png'),
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
               ),
@@ -84,7 +87,7 @@ class _OnBoardingScreen1State extends State<OnBoardingScreen1> {
                       const SizedBox(height: 20),
                       // First sentence - BOLD - centered
                       const Text(
-                        'Explore upcoming and nearby events',
+                        ' Web Have Modern Events Calendar Feature',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 24,
@@ -95,7 +98,7 @@ class _OnBoardingScreen1State extends State<OnBoardingScreen1> {
                       const SizedBox(height: 16),
                       // Second sentence - normal weight - centered
                       const Text(
-                        'in publishing and graphic design, Lorem is a placeholder text commonly',
+                        ' In publishing and graphic design, Lorem is a placeholder text commonly ',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 16,
@@ -139,7 +142,7 @@ class _OnBoardingScreen1State extends State<OnBoardingScreen1> {
                           TextButton(
                             onPressed: () {
                               setState(() {
-                                _currentDot = 1;
+                                _currentDot = 2;
                               });
                               _nextScreen();
                             },
