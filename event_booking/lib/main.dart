@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 import 'package:event_booking/core/styles/apptheme.dart';
-import 'dart:io';
 import 'package:event_booking/features/auth/pages/signin.dart';
 
 void main() {
@@ -17,12 +17,12 @@ class MainApp extends StatelessWidget {
       builder: (context, child) {
         return SafeArea(
           top: false,
-          bottom: Platform.isAndroid,
+          bottom: !kIsWeb && defaultTargetPlatform == TargetPlatform.android,
           child: child ?? Container(),
         );
       },
       debugShowCheckedModeBanner: false,
-      home: Signin(),
+      home: SignInPage(),
     );
   }
 }
