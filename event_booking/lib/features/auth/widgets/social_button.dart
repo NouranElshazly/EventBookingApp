@@ -1,3 +1,4 @@
+import 'package:event_booking/core/styles/color.dart';
 import 'package:flutter/material.dart';
 import 'package:event_booking/core/styles/text_style.dart';
 // import 'package:event_booking/core/widgets/svg_picture_custome.dart';
@@ -33,7 +34,10 @@ class SocialButton extends StatelessWidget {
           children: [
             SizedBox(width: 22, height: 22, child: icon),
             SizedBox(width: 10),
-            Text(label, style: TextStyles.mainbody),
+            Text(
+              label,
+              style: TextStyles.mainbody.copyWith(fontWeight: FontWeight.w500),
+            ),
           ],
         ),
       ),

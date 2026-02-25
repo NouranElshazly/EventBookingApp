@@ -22,7 +22,7 @@ class TextrichCostumer extends StatelessWidget {
         Text.rich(
           TextSpan(
             text: text1,
-            style: TextStyles.mainbody.copyWith(color: Colors.grey),
+            style: TextStyles.mainbody,
             children: [
               WidgetSpan(
                 alignment: PlaceholderAlignment.middle,
@@ -30,9 +30,9 @@ class TextrichCostumer extends StatelessWidget {
                   onTap: onpress,
                   child: Text(
                     text2,
-                    style: TextStyles.mainbody.copyWith(
+                    style: TextStyles.body2.copyWith(
                       color: AppColors.primaryColor,
-                      fontWeight: FontWeight.w600,
+                      fontWeight: FontWeight.w400,
                     ),
                   ),
                 ),

@@ -26,10 +26,8 @@ class RememberMeRow extends StatelessWidget {
               activeThumbColor: AppColors.primaryColor,
               onChanged: onChanged,
             ),
-            Text(
-              'Remember Me',
-              style: TextStyles.mainbody.copyWith(color: Colors.grey),
-            ),
+
+            Text('Remember Me', style: TextStyles.body3),
           ],
         ),
         TextButton(
