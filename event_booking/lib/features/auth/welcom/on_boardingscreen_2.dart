@@ -1,5 +1,5 @@
 import 'package:event_booking/core/styles/color.dart';
-import 'package:event_booking/features/welcom/on_boarding_screen_3.dart';
+import 'package:event_booking/features/auth/welcom/on_boarding_screen_3.dart';
 import 'package:flutter/material.dart';
 
 class OnBoardingscreen2 extends StatefulWidget {

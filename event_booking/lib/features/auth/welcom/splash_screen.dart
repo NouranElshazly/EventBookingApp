@@ -1,8 +1,7 @@
-import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:event_booking/core/styles/color.dart';
-import 'package:event_booking/features/welcom/on_boarding_screen_1.dart'
-    show OnBoardingScreen1;
+import 'package:event_booking/features/auth/welcom/on_boarding_screen_1.dart';
 import 'package:flutter/material.dart';
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});

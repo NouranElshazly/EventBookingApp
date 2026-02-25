@@ -1,5 +1,5 @@
 import 'package:event_booking/core/styles/color.dart';
-import 'package:event_booking/features/auth/pages/sign_up.dart';
+import 'package:event_booking/features/auth/pages/signin.dart';
 import 'package:flutter/material.dart';
 
 class OnBoardingScreen3 extends StatefulWidget {
@@ -15,7 +15,7 @@ class _OnBoardingScreen3State extends State<OnBoardingScreen3> {
   void _nextScreen() {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => const SignUp()),
+      MaterialPageRoute(builder: (context) => const SignInPage()),
     );
   }
 
