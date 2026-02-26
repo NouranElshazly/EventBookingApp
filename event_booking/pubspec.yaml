@@ -21,8 +21,17 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/
-    - assets/icons/
+    - assets/images/profile.jpg
+    - assets/icons/profile_icon.png
+    - assets/icons/massage_icon.png
+    - assets/icons/calendar_icon.png
+    - assets/icons/booking_icon.png
+    - assets/icons/contact_icon.png
+    - assets/icons/settings_icon.png
+    - assets/icons/help_icon.png
+    - assets/icons/sign_out_icon.png
+
+
 
   fonts:
     - family: AirbnbCereal
