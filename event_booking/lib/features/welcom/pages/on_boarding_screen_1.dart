@@ -41,7 +41,7 @@ class _OnBoardingScreen1State extends State<OnBoardingScreen1> {
                   width: MediaQuery.of(context).size.width,
                   child: Image(
                     image: AssetImage('assets/images/background1.png'),
-                    fit: BoxFit.cover,
+                    fit: BoxFit.none,
                   ),
                 ),
               ),

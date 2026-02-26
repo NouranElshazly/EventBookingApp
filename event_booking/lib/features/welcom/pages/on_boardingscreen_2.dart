@@ -35,7 +35,7 @@ class _OnBoardingscreen2State extends State<OnBoardingscreen2> {
               left: 0,
               right: 0,
               child: Padding(
-                padding: const EdgeInsets.all(60.0),
+                padding: const EdgeInsets.all(16.0),
                 child: SizedBox(
                   height: MediaQuery.of(context).size.height * 0.55,
                   width: MediaQuery.of(context).size.width,
@@ -43,7 +43,7 @@ class _OnBoardingscreen2State extends State<OnBoardingscreen2> {
                     padding: const EdgeInsets.all(8.0),
                     child: Image(
                       image: AssetImage('assets/images/background2.png'),
-                      fit: BoxFit.cover,
+                      fit: BoxFit.none,
                     ),
                   ),
                 ),

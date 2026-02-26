@@ -13,13 +13,6 @@ class OnBoardingScreen3 extends StatefulWidget {
 class _OnBoardingScreen3State extends State<OnBoardingScreen3> {
   final int _currentDot = 2;
 
-  void _nextScreen() {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => const SignInPage()),
-    );
-  }
-
   void _skip() {
     Navigator.pop(context);
   }
@@ -44,7 +37,7 @@ class _OnBoardingScreen3State extends State<OnBoardingScreen3> {
                     padding: const EdgeInsets.only(bottom: 16.0),
                     child: Image(
                       image: AssetImage('assets/images/background3.png'),
-                      fit: BoxFit.cover,
+                      fit: BoxFit.none,
                     ),
                   ),
                 ),

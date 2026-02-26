@@ -1,4 +1,3 @@
-import 'package:event_booking/core/styles/color.dart';
 import 'package:flutter/material.dart';
 import 'package:event_booking/core/styles/text_style.dart';
 // import 'package:event_booking/core/widgets/svg_picture_custome.dart';
