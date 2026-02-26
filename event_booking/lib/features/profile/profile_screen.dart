@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'organizer_profile_screen.dart'; 
+import 'organizer_profile_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -31,7 +31,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
               /// TOP BAR
               Row(
                 children: [
@@ -63,8 +62,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               const Center(
                 child: CircleAvatar(
                   radius: 60,
-                  backgroundImage:
-                      AssetImage("assets/images/profile.png"),
+                  backgroundImage: AssetImage("assets/images/profile.png"),
                 ),
               ),
 
@@ -88,7 +86,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
-
                   Column(
                     children: [
                       Text(
@@ -155,14 +152,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) =>
-                            const OrganizerProfileScreen(),
+                        builder: (context) => const OrganizerProfileScreen(),
                       ),
                     );
                   },
                   child: Container(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 30, vertical: 14),
+                      horizontal: 30,
+                      vertical: 14,
+                    ),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(14),
                       border: Border.all(
@@ -242,7 +240,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           : Icons.keyboard_arrow_down,
                       color: const Color(0xff5669FF),
                       size: 18,
-                    )
+                    ),
                   ],
                 ),
               ),
@@ -269,7 +267,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     },
                     child: Container(
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 16, vertical: 8),
+                        horizontal: 16,
+                        vertical: 8,
+                      ),
                       decoration: BoxDecoration(
                         color: const Color(0xffF3F1FF),
                         borderRadius: BorderRadius.circular(20),
@@ -298,7 +298,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     children: [
                       Container(
                         padding: const EdgeInsets.symmetric(
-                            horizontal: 18, vertical: 10),
+                          horizontal: 18,
+                          vertical: 10,
+                        ),
                         decoration: BoxDecoration(
                           color: interest["color"],
                           borderRadius: BorderRadius.circular(30),
