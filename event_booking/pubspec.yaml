@@ -1,6 +1,6 @@
 name: event_booking
 description: "A new Flutter project."
-publish_to: 'none'
+publish_to: "none"
 version: 0.1.0
 
 environment:
@@ -9,6 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_svg: ^2.2.3
+  animated_splash_screen: ^1.3.0
 
 dev_dependencies:
   flutter_test:
@@ -17,6 +19,19 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
   assets:
     - assets/images/
     - assets/icons/
+
+  fonts:
+    - family: AirbnbCereal
+      fonts:
+        - asset: assets/fonts/AirbnbCereal_W_Lt.otf
+          weight: 300
+        - asset: assets/fonts/AirbnbCereal_W_Bk.otf
+          weight: 400
+        - asset: assets/fonts/AirbnbCereal_W_Md.otf
+          weight: 500
+        - asset: assets/fonts/AirbnbCereal_W_Bd.otf
+          weight: 700
