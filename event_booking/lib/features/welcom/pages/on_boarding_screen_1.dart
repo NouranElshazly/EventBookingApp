@@ -26,6 +26,7 @@ class _OnBoardingScreen1State extends State<OnBoardingScreen1> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
+      top: false,
       child: Scaffold(
         body: Stack(
           children: [

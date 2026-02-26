@@ -17,6 +17,7 @@ class MainApp extends StatelessWidget {
       builder: (context, child) {
         return SafeArea(
           top: false,
+
           bottom: !kIsWeb && defaultTargetPlatform == TargetPlatform.android,
           child: child ?? Container(),
         );
