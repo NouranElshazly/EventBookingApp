@@ -24,7 +24,6 @@ class _OrganizerProfileScreenState extends State<OrganizerProfileScreen> {
               children: [
                 const SizedBox(height: 8),
 
-                /// TOP BAR
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -53,7 +52,6 @@ class _OrganizerProfileScreenState extends State<OrganizerProfileScreen> {
 
                 const SizedBox(height: 20),
 
-                ///  PROFILE IMAGE
                 const CircleAvatar(
                   radius: 55,
                   backgroundImage:
@@ -62,10 +60,11 @@ class _OrganizerProfileScreenState extends State<OrganizerProfileScreen> {
 
                 const SizedBox(height: 18),
 
-                ///  NAME
+              
                 const Text(
                   "David Silbia",
                   style: TextStyle(
+                    fontFamily: "AirbnbCereal",
                     fontSize: 26,
                     fontWeight: FontWeight.w700,
                     color: Color(0xff1C1C2D),
@@ -74,7 +73,7 @@ class _OrganizerProfileScreenState extends State<OrganizerProfileScreen> {
 
                 const SizedBox(height: 22),
 
-                ///  FOLLOWERS
+             
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
@@ -82,11 +81,13 @@ class _OrganizerProfileScreenState extends State<OrganizerProfileScreen> {
                       children: [
                         Text("350",
                             style: TextStyle(
+                                fontFamily: "AirbnbCereal",
                                 fontSize: 20,
                                 fontWeight: FontWeight.w700)),
                         SizedBox(height: 4),
                         Text("Following",
                             style: TextStyle(
+                                fontFamily: "AirbnbCereal",
                                 fontSize: 14,
                                 color: Color(0xff747688))),
                       ],
@@ -104,11 +105,13 @@ class _OrganizerProfileScreenState extends State<OrganizerProfileScreen> {
                       children: [
                         Text("346",
                             style: TextStyle(
+                                fontFamily: "AirbnbCereal",
                                 fontSize: 20,
                                 fontWeight: FontWeight.w700)),
                         SizedBox(height: 4),
                         Text("Followers",
                             style: TextStyle(
+                                fontFamily: "AirbnbCereal",
                                 fontSize: 14,
                                 color: Color(0xff747688))),
                       ],
@@ -118,7 +121,6 @@ class _OrganizerProfileScreenState extends State<OrganizerProfileScreen> {
 
                 const SizedBox(height: 28),
 
-                ///  BUTTONS
                 Row(
                   children: [
                     Expanded(
@@ -147,6 +149,7 @@ class _OrganizerProfileScreenState extends State<OrganizerProfileScreen> {
                               Text(
                                 "Follow",
                                 style: TextStyle(
+                                  fontFamily: "AirbnbCereal",
                                   color: Colors.white,
                                   fontWeight: FontWeight.w600,
                                   fontSize: 16,
@@ -182,6 +185,7 @@ class _OrganizerProfileScreenState extends State<OrganizerProfileScreen> {
                               Text(
                                 "Messages",
                                 style: TextStyle(
+                                  fontFamily: "AirbnbCereal",
                                   color: Color(0xff5669FF),
                                   fontWeight: FontWeight.w600,
                                   fontSize: 16,
@@ -197,7 +201,7 @@ class _OrganizerProfileScreenState extends State<OrganizerProfileScreen> {
 
                 const SizedBox(height: 30),
 
-                ///  TABS
+              
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
@@ -234,6 +238,7 @@ class _OrganizerProfileScreenState extends State<OrganizerProfileScreen> {
               ? "Enjoy your favorite dishes with your friends and family and have a great time. We organize amazing events every weekend."
               : "Enjoy your favorite dishes with your friends and family.",
           style: const TextStyle(
+            fontFamily: "AirbnbCereal",
             fontSize: 16,
             height: 1.6,
             color: Color(0xff747688),
@@ -249,6 +254,7 @@ class _OrganizerProfileScreenState extends State<OrganizerProfileScreen> {
           child: Text(
             isExpanded ? "Read Less" : "Read More",
             style: const TextStyle(
+              fontFamily: "AirbnbCereal",
               color: Color(0xff5669FF),
               fontWeight: FontWeight.w600,
             ),
@@ -323,6 +329,7 @@ class _OrganizerProfileScreenState extends State<OrganizerProfileScreen> {
           Text(
             text,
             style: TextStyle(
+              fontFamily: "AirbnbCereal",
               fontSize: 15,
               fontWeight: FontWeight.w600,
               color: active
@@ -393,6 +400,7 @@ class EventCard extends StatelessWidget {
                 Text(
                   date,
                   style: const TextStyle(
+                    fontFamily: "AirbnbCereal",
                     fontSize: 13,
                     fontWeight: FontWeight.w600,
                     color: Color(0xff5669FF),
@@ -402,6 +410,7 @@ class EventCard extends StatelessWidget {
                 Text(
                   title,
                   style: const TextStyle(
+                    fontFamily: "AirbnbCereal",
                     fontSize: 18,
                     fontWeight: FontWeight.w700,
                     color: Color(0xff1C1C2D),
@@ -444,6 +453,7 @@ class ReviewItem extends StatelessWidget {
                 child: Text(
                   name,
                   style: const TextStyle(
+                    fontFamily: "AirbnbCereal",
                     fontSize: 18,
                     fontWeight: FontWeight.w700,
                   ),
@@ -452,6 +462,7 @@ class ReviewItem extends StatelessWidget {
               const Text(
                 "10 Feb",
                 style: TextStyle(
+                  fontFamily: "AirbnbCereal",
                   color: Color(0xffA1A1B5),
                 ),
               )
@@ -463,6 +474,7 @@ class ReviewItem extends StatelessWidget {
           const Text(
             "Cinemas is the ultimate experience to see new movies in Gold Class or Vmax.",
             style: TextStyle(
+              fontFamily: "AirbnbCereal",
               fontSize: 15,
               height: 1.6,
               color: Color(0xff747688),

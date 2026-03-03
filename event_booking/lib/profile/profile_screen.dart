@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'organizer_profile_screen.dart'; 
+import 'organizer_profile_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -31,8 +31,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
-              /// TOP BAR
               Row(
                 children: [
                   IconButton(
@@ -49,6 +47,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   const Text(
                     "Profile",
                     style: TextStyle(
+                      fontFamily: "Urbanist",
                       fontSize: 24,
                       fontWeight: FontWeight.w700,
                       color: Color(0xff1C1C2D),
@@ -59,22 +58,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
               const SizedBox(height: 30),
 
-              /// PROFILE IMAGE
+              
               const Center(
                 child: CircleAvatar(
                   radius: 60,
-                  backgroundImage:
-                      AssetImage("assets/images/profile.png"),
+                  backgroundImage: AssetImage("assets/images/profile.png"),
                 ),
               ),
 
               const SizedBox(height: 20),
 
-              /// NAME
+        
               const Center(
                 child: Text(
                   "Ashfak Sayem",
                   style: TextStyle(
+                    fontFamily: "Urbanist",
                     fontSize: 26,
                     fontWeight: FontWeight.w700,
                     color: Color(0xff1C1C2D),
@@ -84,16 +83,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
               const SizedBox(height: 20),
 
-              /// FOLLOWERS
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
-
                   Column(
                     children: [
                       Text(
                         "350",
                         style: TextStyle(
+                          fontFamily: "Urbanist",
                           fontSize: 20,
                           fontWeight: FontWeight.w700,
                           color: Color(0xff1C1C2D),
@@ -103,15 +101,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       Text(
                         "Following",
                         style: TextStyle(
+                          fontFamily: "Urbanist",
                           fontSize: 14,
                           color: Color(0xff747688),
                         ),
                       ),
                     ],
                   ),
-
                   SizedBox(width: 30),
-
                   SizedBox(
                     height: 40,
                     child: VerticalDivider(
@@ -119,14 +116,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       color: Color(0xffE0E0E0),
                     ),
                   ),
-
                   SizedBox(width: 30),
-
                   Column(
                     children: [
                       Text(
                         "346",
                         style: TextStyle(
+                          fontFamily: "Urbanist",
                           fontSize: 20,
                           fontWeight: FontWeight.w700,
                           color: Color(0xff1C1C2D),
@@ -136,6 +132,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       Text(
                         "Followers",
                         style: TextStyle(
+                          fontFamily: "Urbanist",
                           fontSize: 14,
                           color: Color(0xff747688),
                         ),
@@ -147,7 +144,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
               const SizedBox(height: 25),
 
-              /// EDIT PROFILE BUTTON
+          
               Center(
                 child: InkWell(
                   borderRadius: BorderRadius.circular(14),
@@ -155,14 +152,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) =>
-                            const OrganizerProfileScreen(),
+                        builder: (context) => const OrganizerProfileScreen(),
                       ),
                     );
                   },
                   child: Container(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 30, vertical: 14),
+                      horizontal: 30,
+                      vertical: 14,
+                    ),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(14),
                       border: Border.all(
@@ -182,6 +180,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         const Text(
                           "Edit Profile",
                           style: TextStyle(
+                            fontFamily: "Urbanist",
                             color: Color(0xff5669FF),
                             fontWeight: FontWeight.w600,
                             fontSize: 16,
@@ -195,10 +194,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
               const SizedBox(height: 35),
 
-              /// ABOUT ME
               const Text(
                 "About Me",
                 style: TextStyle(
+                  fontFamily: "Urbanist",
                   fontSize: 20,
                   fontWeight: FontWeight.w700,
                   color: Color(0xff1C1C2D),
@@ -212,6 +211,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 maxLines: isExpanded ? null : 3,
                 overflow: TextOverflow.fade,
                 style: const TextStyle(
+                  fontFamily: "Urbanist",
                   height: 1.6,
                   fontSize: 15,
                   color: Color(0xff747688),
@@ -231,6 +231,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     Text(
                       isExpanded ? "Show Less" : "Read More",
                       style: const TextStyle(
+                        fontFamily: "Urbanist",
                         color: Color(0xff5669FF),
                         fontWeight: FontWeight.w600,
                       ),
@@ -242,20 +243,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           : Icons.keyboard_arrow_down,
                       color: const Color(0xff5669FF),
                       size: 18,
-                    )
+                    ),
                   ],
                 ),
               ),
 
               const SizedBox(height: 35),
 
-              /// INTEREST HEADER
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
                     "Interest",
                     style: TextStyle(
+                      fontFamily: "Urbanist",
                       fontSize: 20,
                       fontWeight: FontWeight.w700,
                       color: Color(0xff1C1C2D),
@@ -269,7 +270,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     },
                     child: Container(
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 16, vertical: 8),
+                        horizontal: 16,
+                        vertical: 8,
+                      ),
                       decoration: BoxDecoration(
                         color: const Color(0xffF3F1FF),
                         borderRadius: BorderRadius.circular(20),
@@ -277,6 +280,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       child: const Text(
                         "CHANGE",
                         style: TextStyle(
+                          fontFamily: "Urbanist", 
                           color: Color(0xff5669FF),
                           fontWeight: FontWeight.w700,
                         ),
@@ -288,7 +292,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
               const SizedBox(height: 20),
 
-              /// INTEREST CHIPS
+         
               Wrap(
                 spacing: 12,
                 runSpacing: 12,
@@ -298,7 +302,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     children: [
                       Container(
                         padding: const EdgeInsets.symmetric(
-                            horizontal: 18, vertical: 10),
+                          horizontal: 18,
+                          vertical: 10,
+                        ),
                         decoration: BoxDecoration(
                           color: interest["color"],
                           borderRadius: BorderRadius.circular(30),
@@ -306,6 +312,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         child: Text(
                           interest["title"],
                           style: const TextStyle(
+                            fontFamily: "Urbanist",
                             color: Colors.white,
                             fontWeight: FontWeight.w600,
                           ),
