@@ -46,9 +46,9 @@
 
 ### Profile & Social
 
-|               My Profile               |                    Organizer Profile                    |                  Notifications                  |                  Invite Friend                  |              Share              |
-| :------------------------------------: | :-----------------------------------------------------: | :---------------------------------------------: | :---------------------------------------------: | :-----------------------------: |
-| ![My Profile](screenshots/profile.png) | ![Organizer Profile](screenshots/organizer_profile.png) | ![Notifications](screenshots/notifications.png) | ![Invite Friend](screenshots/invite_friend.png) | ![Share](screenshots/share.png) |
+|               My Profile               |                    Organizer Profile                    |
+| :------------------------------------: | :-----------------------------------------------------: |
+| ![My Profile](screenshots/profile.png) | ![Organizer Profile](screenshots/organizer_profile.png) |
 
 ---
 
