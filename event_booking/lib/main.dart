@@ -1,3 +1,5 @@
+import 'package:event_booking/features/profile/events_screen.dart';
+import 'package:event_booking/features/search/pages/search_white_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:event_booking/core/styles/apptheme.dart';
@@ -23,7 +25,8 @@ class MainApp extends StatelessWidget {
         );
       },
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      // home: SplashScreen(),
+      home: SearchWhiteBar(),
     );
   }
 }
