@@ -1,6 +1,7 @@
 import 'package:event_booking/core/styles/color.dart';
 import 'package:event_booking/core/styles/text_style.dart';
 import 'package:event_booking/features/search/event_card/event_card_model.dart';
+import 'package:event_booking/features/search/widgets/filter_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 
 class SearchWhiteBar extends StatelessWidget {
@@ -12,7 +13,7 @@ class SearchWhiteBar extends StatelessWidget {
       appBar: AppBar(
         title: Padding(
           padding: const EdgeInsets.only(left: 1.0),
-          child: Text('Search', style: TextStyles.appbar),
+          child: Text('Search', style: TextStyles.h4),
         ),
         backgroundColor: AppColors.backgroundColor,
       ),
@@ -86,7 +87,7 @@ class SearchWhiteBar extends StatelessWidget {
                       'Filter',
                       style: TextStyle(color: Colors.white, fontSize: 18),
                     ),
-                    onPressed: () {},
+                    onPressed: () => showFilterBottomSheet(context),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppColors.primaryColor,
                       minimumSize: const Size(125, 50),
