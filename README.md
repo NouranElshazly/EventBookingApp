@@ -24,25 +24,31 @@
 
 ## Screenshots
 
-| Splash                          | Onboarding 1                     | Onboarding 2            | Onboarding 3          |
-| ------------------------------- | -------------------------------- | ----------------------- | --------------------- |
-| EventHub logo centered on white | Explore upcoming & nearby events | Modern calendar feature | Look up events by map |
+### Onboarding & Auth
 
-| Sign In                       | Sign Up                | Verification      | Reset Password             |
-| ----------------------------- | ---------------------- | ----------------- | -------------------------- |
-| Email/password + social login | Full registration form | 4-digit OTP input | Email-based password reset |
+|              Splash               |                 Onboarding 1                 |                 Onboarding 2                 |                 Onboarding 3                 |
+| :-------------------------------: | :------------------------------------------: | :------------------------------------------: | :------------------------------------------: |
+| ![Splash](screenshots/splash.png) | ![Onboarding 1](screenshots/onboarding1.png) | ![Onboarding 2](screenshots/onboarding2.png) | ![Onboarding 3](screenshots/onboarding3.png) |
 
-| Home                 | Event Details                | Map View             | See All Events     |
-| -------------------- | ---------------------------- | -------------------- | ------------------ |
-| Upcoming events list | Concert details + buy ticket | Interactive map pins | Full event listing |
+|              Sign In               |              Sign Up               |                 Verification                  |                  Reset Password                   |
+| :--------------------------------: | :--------------------------------: | :-------------------------------------------: | :-----------------------------------------------: |
+| ![Sign In](screenshots/signin.png) | ![Sign Up](screenshots/signup.png) | ![Verification](screenshots/verification.png) | ![Reset Password](screenshots/reset_password.png) |
 
-| Search                     | Filter                             | Empty Events         | Empty Notifications  |
-| -------------------------- | ---------------------------------- | -------------------- | -------------------- |
-| Search bar + filter button | Category · Date · Location · Price | Friendly empty state | No notifications yet |
+### Event Discovery
 
-| My Profile                | Organizer Profile             | Notifications | Invite Friend       | Share              |
-| ------------------------- | ----------------------------- | ------------- | ------------------- | ------------------ |
-| Stats · about · interests | Follow · message · event tabs | Activity feed | Contact invite list | Social share sheet |
+|             Home              |                  Event Details                  |               Map View                |                  See All Events                   |
+| :---------------------------: | :---------------------------------------------: | :-----------------------------------: | :-----------------------------------------------: |
+| ![Home](screenshots/home.png) | ![Event Details](screenshots/event_details.png) | ![Map View](screenshots/map_view.png) | ![See All Events](screenshots/see_all_events.png) |
+
+|              Search               |              Filter               |                 Empty Events                  |             Menu              |
+| :-------------------------------: | :-------------------------------: | :-------------------------------------------: | :---------------------------: |
+| ![Search](screenshots/search.png) | ![Filter](screenshots/filter.png) | ![Empty Events](screenshots/empty_events.png) | ![Menu](screenshots/menu.png) |
+
+### Profile & Social
+
+|               My Profile               |                    Organizer Profile                    |                  Notifications                  |                  Invite Friend                  |              Share              |
+| :------------------------------------: | :-----------------------------------------------------: | :---------------------------------------------: | :---------------------------------------------: | :-----------------------------: |
+| ![My Profile](screenshots/profile.png) | ![Organizer Profile](screenshots/organizer_profile.png) | ![Notifications](screenshots/notifications.png) | ![Invite Friend](screenshots/invite_friend.png) | ![Share](screenshots/share.png) |
 
 ---
 
@@ -170,7 +176,5 @@ flutter build apk --release
 # iOS (requires macOS + Xcode)
 flutter build ios --release
 ```
-
----
 
 > Designed in Figma · Built with Flutter
