@@ -26,7 +26,7 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
 
   void _onSendPressed() {
     if (formKey.currentState!.validate()) {
-      // TODO: send reset link to emailController.text
+      
     }
   }
 

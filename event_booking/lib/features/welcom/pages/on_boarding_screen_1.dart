@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:event_booking/core/styles/color.dart';
 import 'package:event_booking/features/welcom/pages/on_boardingscreen_2.dart';
 import 'package:flutter/material.dart';

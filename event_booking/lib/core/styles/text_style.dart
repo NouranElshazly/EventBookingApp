@@ -19,4 +19,6 @@ abstract class TextStyles {
     fontSize: 16,
     fontWeight: FontWeight.w400,
   );
+
+  static TextStyle? get appbar => null;
 }
