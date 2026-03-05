@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:event_booking/core/styles/color.dart';
 import 'package:event_booking/core/styles/text_style.dart';
 
+// ignore: camel_case_types
 class main_button extends StatelessWidget {
   const main_button({super.key, required this.text, this.onPressed});
 

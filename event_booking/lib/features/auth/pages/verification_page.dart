@@ -61,7 +61,6 @@ class _VerificationPageState extends State<VerificationPage> {
       );
       return;
     }
-    // TODO: verify the code with your backend
   }
 
   @override

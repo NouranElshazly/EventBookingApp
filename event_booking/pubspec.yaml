@@ -21,8 +21,53 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/
-    - assets/icons/
+    - assets/images/header.jpg
+    - assets/images/band1.jpg
+    - assets/images/band_2.jpg
+    - assets/images/banner.jpg
+    - assets/icons/food.png
+    - assets/icons/music.png
+    - assets/icons/sports.png
+    - assets/icons/profile_1.png
+    - assets/icons/map.png
+    - assets/icons/eventes.png
+    - assets/icons/explore.png
+    - assets/icons/profile_icon.png
+    - assets/icons/booking_icon.png
+    - assets/icons/help_icon.png
+    - assets/icons/profile_icon.png
+    - assets/icons/help_icon.png
+    - assets/icons/calendar_icon.png
+    - assets/icons/contact_icon.png
+    - assets/icons/massage_icon.png
+    - assets/icons/profile_icon.png
+    - assets/icons/sign_out_icon.png
+    - assets/icons/profile_1.png
+    - assets/icons/settings_icon.png
+    - assets/icons/premium_icon.png
+    - assets/images/revie1.png
+    - assets/images/revie2.png
+    - assets/images/revie3.png
+    - assets/icons/icon_1.png
+    - assets/icons/search_icon.png
+    - assets/icons/filter_icon.png
+    - assets/icons/menu_icon.png
+    - assets/images/event_detalis.jpg
+    - assets/images/organizer.jpg
+    - assets/images/location.png
+    - assets/icons/Fav_icon.png
+    - assets/images/date.png
+    - assets/images/map.png
+    - assets/images/event_map.jpg
+    - assets/images/marker1.png
+    - assets/images/marker2.png
+    - assets/images/marker3.png
+    - assets/images/marker4.png
+    - assets/images/calendar.png
+
+
+
+
 
   fonts:
     - family: AirbnbCereal
