@@ -40,9 +40,9 @@
 | :---------------------------: | :---------------------------------------------: | :-----------------------------------: | :-----------------------------------------------: |
 | ![Home](screenshots/home.png) | ![Event Details](screenshots/event_details.png) | ![Map View](screenshots/map_view.png) | ![See All Events](screenshots/see_all_events.png) |
 
-|              Search               |              Filter               |                 Empty Events                  |             Menu              |
-| :-------------------------------: | :-------------------------------: | :-------------------------------------------: | :---------------------------: |
-| ![Search](screenshots/search.png) | ![Filter](screenshots/filter.png) | ![Empty Events](screenshots/empty_events.png) | ![Menu](screenshots/menu.png) |
+|              Search               |              Filter               |         Empty Events         | Menu |
+| :-------------------------------: | :-------------------------------: | :--------------------------: | :--: |
+| ![Search](screenshots/search.png) | ![Filter](screenshots/filter.png) | [Menu](screenshots/menu.png) |
 
 ### Profile & Social
 

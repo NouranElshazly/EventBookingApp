@@ -9,6 +9,8 @@ import 'package:event_booking/features/home/menu_screen.dart';
 import 'package:event_booking/features/home/widgets/event_card.dart';
 import 'package:event_booking/features/home/widgets/home_header.dart';
 import 'package:event_booking/features/home/widgets/invite_banner.dart';
+import 'package:event_booking/features/profile/events_screen.dart';
+import 'package:event_booking/features/profile/profile_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -22,9 +24,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   final List<Widget> _pages = const [
     EventDetailsScreen(),
-    EventDetailsScreen(),
+    EventsScreen(),
     MapViewScreen(),
-    Center(child: Text('Profile Page', style: TextStyle(fontSize: 24))),
+    ProfileScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -83,7 +85,17 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: const EdgeInsets.only(bottom: 120),
                 child: Column(
                   children: [
-                    HomeHeader(openMenu: _openMenu),
+                    HomeHeader(
+                      openMenu: _openMenu,
+                      onSearchTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => const EventsScreen(openSearch: true),
+                          ),
+                        );
+                      },
+                    ),
 
                     const SizedBox(height: 60),
 
@@ -104,7 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (_) => const EventDetailsScreen(),
+                                  builder: (_) => const EventsScreen(),
                                 ),
                               );
                             },
@@ -124,18 +136,24 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: ListView(
                         scrollDirection: Axis.horizontal,
                         padding: const EdgeInsets.symmetric(horizontal: 16),
-                        children: const [
+                        children: [
                           EventCard2(
                             backgroundImage: 'assets/images/band1.jpg',
                             date: '12',
                             month: 'Mar',
                             title: 'Music Festival',
                             location: 'Cairo Opera House',
-                            attendees: [
+                            attendees: const [
                               'assets/images/revie1.png',
                               'assets/images/revie2.png',
                               'assets/images/revie3.png',
                             ],
+                            onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (_) => const EventDetailsScreen(),
+                              ),
+                            ),
                           ),
 
                           EventCard2(
@@ -144,11 +162,17 @@ class _HomeScreenState extends State<HomeScreen> {
                             month: 'Apr',
                             title: 'Rock Night',
                             location: 'Alexandria Arena',
-                            attendees: [
+                            attendees: const [
                               'assets/images/revie1.png',
                               'assets/images/revie2.png',
                               'assets/images/revie3.png',
                             ],
+                            onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (_) => const EventDetailsScreen(),
+                              ),
+                            ),
                           ),
                         ],
                       ),

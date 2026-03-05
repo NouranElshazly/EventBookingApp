@@ -14,7 +14,7 @@ import 'package:event_booking/features/auth/widgets/textrich_costumer.dart';
 import 'package:event_booking/features/auth/pages/reset_password_page.dart';
 import 'package:event_booking/features/auth/pages/signup.dart';
 import 'package:event_booking/core/widgets/gradient_background.dart';
-// import 'package:event_booking/features/main/main_app_page.dart';
+import 'package:event_booking/features/home/home_screen.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({super.key});
@@ -133,7 +133,9 @@ class _SignInPageState extends State<SignInPage> {
                       padding: const EdgeInsets.only(left: 40, right: 40),
                       child: main_button(
                         text: 'SIGN IN ',
-                        onPressed: _onSignInPressed,
+                        onPressed: () {
+                          push(context, HomeScreen());
+                        },
                       ),
                     ),
 

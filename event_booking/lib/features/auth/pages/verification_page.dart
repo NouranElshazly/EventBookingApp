@@ -4,6 +4,7 @@ import 'package:event_booking/core/styles/color.dart';
 import 'package:event_booking/core/styles/text_style.dart';
 import 'package:event_booking/core/widgets/gradient_background.dart';
 import 'package:event_booking/core/widgets/main_button.dart';
+import 'package:event_booking/features/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class VerificationPage extends StatefulWidget {
@@ -61,6 +62,11 @@ class _VerificationPageState extends State<VerificationPage> {
       );
       return;
     }
+    Navigator.pushAndRemoveUntil(
+      context,
+      MaterialPageRoute(builder: (_) => const HomeScreen()),
+      (route) => false,
+    );
   }
 
   @override
