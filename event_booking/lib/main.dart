@@ -3,10 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:event_booking/core/styles/apptheme.dart';
-// import 'package:event_booking/features/welcom/pages/splash_screen.dart';
-import 'package:event_booking/features/profile/profile_screen.dart';
-
-
+import 'package:event_booking/features/welcom/pages/splash_screen.dart';
+// import 'package:event_booking/features/profile/profile_screen.dart';
 
 void main() {
   runApp(const MainApp());

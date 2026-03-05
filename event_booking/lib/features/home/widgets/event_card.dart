@@ -12,6 +12,8 @@ class EventCard2 extends StatelessWidget {
   final List<String> attendees;
   final Color backgroundColor;
 
+  final VoidCallback? onTap;
+
   const EventCard2({
     super.key,
     required this.backgroundImage,
@@ -21,11 +23,14 @@ class EventCard2 extends StatelessWidget {
     required this.location,
     required this.attendees,
     this.backgroundColor = AppColors.backgroundColor,
+    this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
       width: 250,
       margin: const EdgeInsets.all(12),
       decoration: BoxDecoration(
@@ -183,6 +188,8 @@ class EventCard2 extends StatelessWidget {
           ),
         ],
       ),
+      ),
     );
   }
 }
+

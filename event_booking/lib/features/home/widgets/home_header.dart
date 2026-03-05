@@ -6,8 +6,9 @@ import 'category_item.dart';
 
 class HomeHeader extends StatelessWidget {
   final VoidCallback openMenu;
+  final VoidCallback? onSearchTap;
 
-  const HomeHeader({super.key, required this.openMenu});
+  const HomeHeader({super.key, required this.openMenu, this.onSearchTap});
 
   @override
   Widget build(BuildContext context) {
@@ -76,28 +77,31 @@ class HomeHeader extends StatelessWidget {
 
               const SizedBox(height: 20),
 
-              Container(
-                height: 45,
-                padding: const EdgeInsets.symmetric(horizontal: 12),
-                decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.2),
-                  borderRadius: BorderRadius.circular(30),
-                ),
-                child: Row(
-                  children: [
-                    Image.asset("assets/icons/search_icon.png", width: 20),
+              GestureDetector(
+                onTap: onSearchTap,
+                child: Container(
+                  height: 45,
+                  padding: const EdgeInsets.symmetric(horizontal: 12),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.2),
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  child: Row(
+                    children: [
+                      Image.asset("assets/icons/search_icon.png", width: 20),
 
-                    const SizedBox(width: 10),
+                      const SizedBox(width: 10),
 
-                    const Expanded(
-                      child: Text(
-                        "Search...",
-                        style: TextStyle(color: Colors.white),
+                      const Expanded(
+                        child: Text(
+                          "Search...",
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
-                    ),
 
-                    Image.asset("assets/icons/filter_icon.png", width: 24),
-                  ],
+                      Image.asset("assets/icons/filter_icon.png", width: 24),
+                    ],
+                  ),
                 ),
               ),
             ],

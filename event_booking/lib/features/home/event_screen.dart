@@ -1,6 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:event_booking/features/home/home_screen.dart';
+import 'package:event_booking/features/profile/organizer_profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:event_booking/core/styles/color.dart';
 import 'package:event_booking/core/styles/text_style.dart';
@@ -169,10 +170,11 @@ class EventDetailsScreen extends StatelessWidget {
 
                 ListTile(
                   leading: CircleAvatar(
-                    child: Image.asset(
-                      "assets/images/date.png",
-                      width: 24,
-                      height: 24,
+                    backgroundColor: AppColors.primaryColor.withOpacity(0.15),
+                    child: const Icon(
+                      Icons.calendar_today,
+                      color: AppColors.primaryColor,
+                      size: 22,
                     ),
                   ),
                   title: const Text("14 December, 2021"),
@@ -181,10 +183,11 @@ class EventDetailsScreen extends StatelessWidget {
 
                 ListTile(
                   leading: CircleAvatar(
-                    child: Image.asset(
-                      "assets/images/location.png",
-                      width: 24,
-                      height: 24,
+                    backgroundColor: AppColors.primaryColor.withOpacity(0.15),
+                    child: const Icon(
+                      Icons.location_on,
+                      color: AppColors.primaryColor,
+                      size: 22,
                     ),
                   ),
                   title: const Text("Gala Convention Center"),
@@ -206,7 +209,14 @@ class EventDetailsScreen extends StatelessWidget {
                   title: const Text("Ashfak Sayem"),
                   subtitle: const Text("Organizer"),
                   trailing: OutlinedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => const OrganizerProfileScreen(),
+                        ),
+                      );
+                    },
                     style: OutlinedButton.styleFrom(
                       foregroundColor: AppColors.primaryColor,
                       side: const BorderSide(color: AppColors.primaryColor),

@@ -1,7 +1,10 @@
+import 'package:event_booking/core/styles/color.dart';
+import 'package:event_booking/features/search/widgets/filter_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 
 class EventsScreen extends StatefulWidget {
-  const EventsScreen({super.key});
+  final bool openSearch;
+  const EventsScreen({super.key, this.openSearch = false});
 
   @override
   State<EventsScreen> createState() => _EventsScreenState();
@@ -57,6 +60,9 @@ class _EventsScreenState extends State<EventsScreen> {
   void initState() {
     super.initState();
     filteredEvents = allEvents;
+    if (widget.openSearch) {
+      isSearching = true;
+    }
   }
 
   void filterEvents(String query) {
@@ -89,111 +95,162 @@ class _EventsScreenState extends State<EventsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-            
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-                child: isSearching
-                    ? Row(
-                        children: [
-                          IconButton(
-                            onPressed: () {
-                              setState(() {
-                                isSearching = false;
-                                clearSearch();
-                              });
-                            },
-                            icon: const Icon(Icons.arrow_back_ios_new),
-                          ),
-                          Expanded(
-                            child: Container(
-                              height: 50,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(14),
-                              ),
-                              child: TextField(
-                                controller: _searchController,
-                                onChanged: filterEvents,
-                                autofocus: true,
-                                style: const TextStyle(
-                                  fontFamily: "AirbnbCereal",
-                                  fontSize: 16,
-                                ),
-                                decoration: const InputDecoration(
-                                  hintText: "Search events...",
-                                  border: InputBorder.none,
-                                  contentPadding: EdgeInsets.symmetric(
-                                    horizontal: 16,
-                                    vertical: 14,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      )
-                    : Row(
-                        children: [
-                          IconButton(
-                            onPressed: () => Navigator.pop(context),
-                            icon:
-                                const Icon(Icons.arrow_back_ios_new),
-                          ),
-                          const Expanded(
-                            child: Text(
-                              "Events",
-                              style: TextStyle(
-                                fontFamily: "AirbnbCereal",
-                                fontSize: 24,
-                                fontWeight: FontWeight.w700,
-                                color: Color(0xff1C1C2D),
-                              ),
-                            ),
-                          ),
-                          IconButton(
-                            onPressed: () {
-                              setState(() {
-                                isSearching = true;
-                              });
-                            },
-                            icon: const Icon(Icons.search),
-                          ),
-                          IconButton(
-                            onPressed: () {
-                     
-                            },
-                            icon: const Icon(Icons.more_vert),
-                          ),
-                        ],
-                      ),
-              ),
+    final bool hasQuery = _searchController.text.isNotEmpty;
 
-           
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Column(
-                  children: filteredEvents
-                      .map(
-                        (event) => EventCard(
-                          image: event["image"]!,
-                          date: event["date"]!,
-                          title: event["title"]!,
-                          location: event["location"]!,
-                        ),
-                      )
-                      .toList(),
-                ),
-              ),
-            ],
+    return Scaffold(
+      backgroundColor: AppColors.backgroundColor,
+      appBar: AppBar(
+        backgroundColor: AppColors.backgroundColor,
+        elevation: 0,
+        leading: IconButton(
+          onPressed: () => Navigator.pop(context),
+          icon: const Icon(Icons.arrow_back_ios_new, color: Colors.black),
+        ),
+        title: const Text(
+          "Events",
+          style: TextStyle(
+            fontFamily: "AirbnbCereal",
+            fontSize: 22,
+            fontWeight: FontWeight.w700,
+            color: Color(0xff1C1C2D),
           ),
         ),
+      ),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: TextField(
+                      controller: _searchController,
+                      onChanged: (v) {
+                        filterEvents(v);
+                        setState(() {});
+                      },
+                      autofocus: isSearching,
+                      style: const TextStyle(
+                        fontFamily: "AirbnbCereal",
+                        fontSize: 16,
+                      ),
+                      decoration: InputDecoration(
+                        hintText: 'Search for events',
+                        hintStyle: TextStyle(
+                          color: AppColors.titleColor,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w500,
+                        ),
+                        prefixIcon: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            const SizedBox(width: 4),
+                            Icon(Icons.search,
+                                color: AppColors.primaryColor, size: 26),
+                            const SizedBox(width: 2),
+                            Text(
+                              '|',
+                              style: TextStyle(
+                                color: AppColors.primaryColor,
+                                fontSize: 30,
+                              ),
+                            ),
+                            const SizedBox(width: 4),
+                          ],
+                        ),
+                        border: InputBorder.none,
+                        contentPadding: const EdgeInsets.symmetric(
+                          horizontal: 16,
+                          vertical: 14,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 12),
+                ElevatedButton.icon(
+                  icon: CircleAvatar(
+                    backgroundColor: AppColors.backgroundColor,
+                    child: const Icon(
+                      Icons.filter_list,
+                      color: AppColors.primaryColor,
+                      size: 22,
+                    ),
+                  ),
+                  label: const Text(
+                    'Filter',
+                    style: TextStyle(color: Colors.white, fontSize: 16),
+                  ),
+                  onPressed: () => showFilterBottomSheet(context),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: AppColors.primaryColor,
+                    minimumSize: const Size(110, 50),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+          Expanded(
+            child: hasQuery && filteredEvents.isEmpty
+                ? Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        width: 180,
+                        height: 180,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: AppColors.greycolor,
+                        ),
+                        child: Center(
+                          child:
+                              Image.asset("assets/images/calendar.png", width: 140),
+                        ),
+                      ),
+                      const SizedBox(height: 24),
+                      const Text(
+                        "No Upcoming Event",
+                        style: TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.grey,
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      const Text(
+                        "No events match your search.\nTry a different keyword.",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontSize: 13, color: Colors.grey),
+                      ),
+                    ],
+                  )
+                : SingleChildScrollView(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Column(
+                      children: filteredEvents
+                          .map(
+                            (event) => EventCard(
+                              image: event["image"]!,
+                              date: event["date"]!,
+                              title: event["title"]!,
+                              location: event["location"]!,
+                            ),
+                          )
+                          .toList(),
+                    ),
+                  ),
+          ),
+        ],
       ),
     );
   }
